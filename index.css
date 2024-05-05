@@ -1,0 +1,72 @@
+.contentpane {
+    position: relative;
+    background-color: #2f2f31;
+
+}
+
+.content {
+    position: absolute;
+    border-radius: 25px;
+    background-color: #35353d;
+}
+
+.tripanelcontent {
+    height: 95%;
+    width: 24%;
+    top: 2.5%;
+}
+
+#logo1 {
+    position: absolute;
+    width:148px;
+    height:148px;
+    left:4px;
+    top:4px;
+}
+
+#navbar {
+    height: 150px;
+    width: 100%;
+    background-color: #3d3d42;
+}
+
+#tripanel {
+    height: 500px;
+    width: 100%;
+}
+
+#left {
+    left: 0.5%;
+}
+
+#centreleft {
+    left: 25.5%;
+}
+
+#centreright {
+    left: 50.5%;
+}
+
+#right {
+    left: 75.5%;
+}
+
+#navbartext {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8vw;
+    
+    color: #ffae00;
+
+    position: absolute;
+    left: 155px;
+    top: -85px;
+
+}
+
+body {
+    margin: 0%;
+    background-color: #2B2B30;
+
+}
