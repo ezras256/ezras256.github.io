@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.png"> -->
+    <title>placeholder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js"></script>
+    <script>
+        var page = 'home'; 
+        var sidePanelActive = false;
+        var panelID = 0;
+    </script>
+</head>
+
+<body>
+    <div id="exit-button" class="drop-shadow-small" onclick="toggleExitButton(sidePanelActive)"></div>
+
+    <div id="artist-selector-panel">
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(0)">X</div>
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(1)">Y</div>
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(2)">Z</div>
+    </div>
+
+    <div id="selector-panel" class="">
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 0)">a1</div>
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 1)">a2</div>
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 2)">a3</div>
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 3)">a4</div>
+    </div>
+
+    <!-- <div id="selector-panel" class="">
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 0)">b1</div>
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 1)">b2</div>
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 2)">b3</div>
+        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 3)">b4</div>
+    </div> -->
+
+    <div id="contentPanel"></div>
+</body>
+
+</html>
