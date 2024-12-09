@@ -6,6 +6,22 @@ function activateSidePanel(PanelID) {
 
 }
 
+function setContent() {
+    
+    let selectorPanel = document.getElementById('selector-panel'); 
+    
+
+}
+
+function getArtistData(name) {
+    fs.readFile('json/artworks_list.json', (err, inputD) => {
+        if (err) throw err;
+           alert(inputD.toString());
+     })
+
+
+}
+
 function changeSideSelectorPanel(index) {
     let selectorPanel = document.getElementById('selector-panel'); 
     // let oldSelectorPanel = document.getElementById('selector-panel-old'); 

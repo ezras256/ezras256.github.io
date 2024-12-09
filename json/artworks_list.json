@@ -10,22 +10,26 @@
                 "0": {
                     "title": "Composition with Red, Blue, and Yellow", 
                     "created": 1930,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/mondrian/0.png"
                 },
                 "1": {
                     "title": "Tableau I", 
                     "created": 1921,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/mondrian/1.png"
                 },
                 "2": {
                     "title": "Avond (Evening): The Red Tree", 
                     "created": 1908,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/mondrian/2.png"
                 },
                 "3": {
                     "title": "Composition 10 in Black and White", 
                     "created": 1915,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/mondrian/3.png"
                 }
             }
         },
@@ -40,22 +44,26 @@
                 "0": {
                     "title": "Several Circles", 
                     "created": 1926,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/kandinsky/0.png"
                 },
                 "1": {
                     "title": "Composition VIII", 
                     "created": 1923,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/kandinsky/1.png"
                 },
                 "2": {
                     "title": "Yellow-Red-Blue", 
                     "created": 1925,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/kandinsky/2.png"
                 },
                 "3": {
                     "title": "On White II", 
                     "created": 1923,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/kandinsky/3.png"
                 }
             }
         }, 
@@ -70,22 +78,26 @@
                 "0": {
                     "title": "Contra-Composition with Dissonances XVI", 
                     "created": 1925,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/doesburg/0.png"
                 },
                 "1": {
                     "title": "Counter-Composition VI", 
                     "created": 1925,
-                    "medium": "oil on canvas"
+                    "medium": "oil on canvas", 
+                    "path": "images/artworks/doesburg/1.png"
                 },
                 "2": {
                     "title": "Stained Glass Composition IV", 
                     "created": 1918,
-                    "medium": "stained glass"
+                    "medium": "stained glass", 
+                    "path": "images/artworks/doesburg/2.png"
                 },
                 "3": {
                     "title": "Dancers", 
                     "created": 1916,
-                    "medium": "oil, cement"
+                    "medium": "oil, cement", 
+                    "path": "images/artworks/doesburg/3.png"
                 }
             }
         }
