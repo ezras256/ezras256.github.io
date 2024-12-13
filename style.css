@@ -2,6 +2,17 @@ html {
     overflow: hidden; 
 }
 
+#content-panel {
+    position: absolute; 
+    width: 100vw; 
+    height: 100vh; 
+    top: 0px; 
+    left: 0px; 
+    background-color: red;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
 #exit-button {
     position: absolute; 
     top: -5vmax; 
@@ -23,31 +34,20 @@ html {
 
 #selector-panel {
     position: absolute; 
-    top: 0px; 
-    right: 0px; 
-    width: 15vw; 
-    height: 100vh; 
+    bottom: 0px; 
+    left: 0px; 
+    width: 100vw; 
+    height: 15vh; 
     display: flex; 
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    transform: translateX(100%); 
-}
-
-#selector-panel-old {
-    position: absolute; 
-    top: 0px; 
-    right: 0px; 
-    width: 15vw; 
-    height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    transform: translateX(100%); 
+    transform: translateY(100%); 
 }
 
 #artist-selector-panel {
     position: absolute; 
-    top: 40vh; 
+    top: 5vh; 
     left: 30vw; 
     width: 40vw; 
     height: 20vh; 
@@ -66,6 +66,7 @@ html {
     align-items: center;
     border-radius: 50%;
     background-color: #f0f0f0;
+    font-size: 2vmin;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
 
@@ -75,18 +76,22 @@ html {
 
 .selector-item {
     flex: 1 1 0; 
-    aspect-ratio: 1;
+    height: 100%;
     display: flex; 
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    background-color: #f4f4f4;
-    transform: scale(0.8); 
+    background-color: #dddddd;
     transition: all 0.4s ease; 
 }
 
+.selector-item p {
+    width: 70%;
+    text-align: center;
+}
+
 .selector-item:hover {
-    transform: translateX(-10%) scale(0.95);
+    transform: translateY(-10%) scale(0.95);
+    background-color: #c7c7c7;
 }
 
 .selector-panel-active {
@@ -97,6 +102,16 @@ html {
 .selector-panel-inactive {
     transform: translateX(100%); 
     animation: selectorPanelToggle 0.6s ease reverse forwards; 
+}
+
+.content-panel-active {
+    transform: translateX(0%);
+    animation: contentPanelToggle 0.6s ease forwards; 
+}
+
+.content-panel-inactive {
+    transform: translateX(100%);
+    animation: contentPanelToggle 0.6s ease forwards; 
 }
 
 .exit-button-active {
@@ -119,11 +134,11 @@ html {
 
 @keyframes selectorPanelToggle {
     from {
-        transform: translateX(100%); 
+        transform: translateY(100%); 
     }
 
     to {
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
 }
 

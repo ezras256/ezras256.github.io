@@ -11,13 +11,11 @@
 
     <script src="index.js"></script>
     <script>
-        const fs = require('fs')
+         var artistData = '{"artists": {"0": {"name": "Piet Mondrian", "dob": [3, 7, 1872], "dod": [2, 1, 1944], "nationality": "Netherlands", "statement": "placeholder", "works": {"0": {"title": "Composition with Red, Blue, and Yellow", "created": 1930,"medium": "oil on canvas", "path": "images/artworks/mondrian/0.png"},"1": {"title": "Tableau I", "created": 1921,"medium": "oil on canvas", "path": "images/artworks/mondrian/1.png"},"2": {"title": "Avond (Evening): The Red Tree", "created": 1908,"medium": "oil on canvas", "path": "images/artworks/mondrian/2.png"},"3": {"title": "Composition 10 in Black and White", "created": 1915,"medium": "oil on canvas", "path": "images/artworks/mondrian/3.png"}}}, "1": {"name": "Wassily Kandinsky", "dob": [12, 16, 1866], "dod": [12, 13, 1944], "nationality": "Russia", "statement": "placeholder", "works": {"0": {"title": "Several Circles", "created": 1926,"medium": "oil on canvas", "path": "images/artworks/kandinsky/0.png"},"1": {"title": "Composition VIII", "created": 1923,"medium": "oil on canvas", "path": "images/artworks/kandinsky/1.png"},"2": {"title": "Yellow-Red-Blue", "created": 1925,"medium": "oil on canvas", "path": "images/artworks/kandinsky/2.png"},"3": {"title": "On White II", "created": 1923,"medium": "oil on canvas", "path": "images/artworks/kandinsky/3.png"}}}, "2": {"name": "Theo van Doesburg", "dob": [8, 30, 1883], "dod": [3, 7, 1931], "nationality": "Netherlands", "statement": "placeholder", "works": {"0": {"title": "Contra-Composition with Dissonances XVI", "created": 1925,"medium": "oil on canvas", "path": "images/artworks/doesburg/0.png"},"1": {"title": "Counter-Composition VI", "created": 1925,"medium": "oil on canvas", "path": "images/artworks/doesburg/1.png"},"2": {"title": "Stained Glass Composition IV", "created": 1918,"medium": "stained glass", "path": "images/artworks/doesburg/2.png"},"3": {"title": "Dancers", "created": 1916,"medium": "oil, cement", "path": "images/artworks/doesburg/3.png"}}}}}'; 
 
         var page = 'home'; 
         var sidePanelActive = false;
-        var panelID = 0;
-
-        getArtistData(""); 
+        var localPanelID = 0;
     </script>
 </head>
 
@@ -25,26 +23,19 @@
     <div id="exit-button" class="drop-shadow-small" onclick="toggleExitButton(sidePanelActive)"></div>
 
     <div id="artist-selector-panel">
-        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(0)">X</div>
-        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(1)">Y</div>
-        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(2)">Z</div>
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(0)"><p>PICASSO</p></div>
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(1)"><p>KANDINSKY</p></div>
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(2)"><p>MONDRIAN</p></div>
     </div>
 
     <div id="selector-panel" class="">
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 0)">a1</div>
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 1)">a2</div>
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 2)">a3</div>
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 3)">a4</div>
+        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 0)"><p>1</p></div>
+        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 1)"><p>2</p></div>
+        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 2)"><p>3</p></div>
+        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 3)"><p>4</p></div>
     </div>
 
-    <!-- <div id="selector-panel" class="">
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 0)">b1</div>
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 1)">b2</div>
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 2)">b3</div>
-        <div class="selector-item drop-shadow" onclick="openArtwork((4 * panelID) + 3)">b4</div>
-    </div> -->
-
-    <div id="contentPanel"></div>
+    <div id="content-panel"></div>
 </body>
 
 </html>
