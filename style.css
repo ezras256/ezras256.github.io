@@ -2,23 +2,72 @@ html {
     overflow: hidden; 
 }
 
-#content-panel {
+#artist-panel {
     position: absolute; 
-    width: 100vw; 
+    width: 40vw; 
     height: 100vh; 
     top: 0px; 
     left: 0px; 
-    background-color: red;
-    z-index: -1;
+    padding: 0px 0px; 
+    background-color: #929292;
+    z-index: -1; 
+}
+
+#artist-panel h1 {
+    padding: 10px 10px; 
+    font-style: italic;
+}
+
+#artist-panel p {
+    padding: 10px 10px; 
+
+}
+
+#content-panel {
+    position: absolute; 
+    width: 60vw; 
+    height: 100vh; 
+    top: 0px; 
+    left: 40vw; 
+    background-color: #e6e6e6;
+    padding: 10px 10px; 
+    z-index: -2;
+    
     transform: translateY(-100%);
+
+}
+
+#painting-image {
+    position: absolute; 
+    width: 45%; 
+    height: 40%; 
+    right: 10.5%; 
+    top: 30%; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* border: 2px solid black; */
+    /* background- */
+    
+}
+
+#content-info h1 {
+    position: absolute; 
+    width: 40%; 
+    height: 12%;
+    right: 55.5%; 
+    top: calc(12% * var(--pos) + 33%); 
+    text-align: right;
+    padding-right: 10px;
+    font-size: 3vmin;
 }
 
 #exit-button {
     position: absolute; 
-    top: -5vmax; 
-    left: 1vmax; 
-    width: 3vmax; 
-    height: 3vmax; 
+    top: -3vmin; 
+    left: 1vmin; 
+    width: 3vmin; 
+    height: 3vmin; 
     background-image: url('/images/arrow-back.png'); 
     background-size: 50%;
     background-position: center center;
@@ -47,14 +96,14 @@ html {
 
 #artist-selector-panel {
     position: absolute; 
-    top: 5vh; 
-    left: 30vw; 
-    width: 40vw; 
+    top: 2vh; 
+    right: 3vw; 
+    width: 30vw; 
     height: 20vh; 
     display: flex; 
     align-items: center;
     flex-direction: row;
-    gap: 7vw;
+    gap: 3vmin;
 
 }
 
@@ -66,8 +115,15 @@ html {
     align-items: center;
     border-radius: 50%;
     background-color: #f0f0f0;
-    font-size: 2vmin;
+    /* font-size: 2vmin; */
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+
+.artist-selector-item p {
+    flex: 1 1 0; 
+    width: 70%;
+    text-align: center;
+    font-size: 2vmin;
 }
 
 .artist-selector-item:hover {
@@ -111,7 +167,7 @@ html {
 
 .content-panel-inactive {
     transform: translateX(100%);
-    animation: contentPanelToggle 0.6s ease forwards; 
+    animation: contentPanelToggle 0.6s ease forwards reverse; 
 }
 
 .exit-button-active {
@@ -142,12 +198,22 @@ html {
     }
 }
 
-@keyframes exitButtonToggle {
+@keyframes contentPanelToggle {
     from {
-        top: -5vmax; 
+        transform: translateY(100%); 
     }
 
     to {
-        top: 1vmax; 
+        transform: translateY(0%);
+    }
+}
+
+@keyframes exitButtonToggle {
+    from {
+        top: -3vmin; 
+    }
+
+    to {
+        top: 1vmin; 
     }
 }

@@ -15,7 +15,9 @@
 
         var page = 'home'; 
         var sidePanelActive = false;
-        var localPanelID = 0;
+        var contentPanelActive = false; 
+        var firstArtwork = true; 
+        var localID = 0;
     </script>
 </head>
 
@@ -23,19 +25,35 @@
     <div id="exit-button" class="drop-shadow-small" onclick="toggleExitButton(sidePanelActive)"></div>
 
     <div id="artist-selector-panel">
-        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(0)"><p>PICASSO</p></div>
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(0)"><p>MONDRIAN</p></div>
         <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(1)"><p>KANDINSKY</p></div>
-        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(2)"><p>MONDRIAN</p></div>
+        <div class="artist-selector-item drop-shadow" onclick="changeSideSelectorPanel(2)"><p>DOESBURG</p></div>
     </div>
 
-    <div id="selector-panel" class="">
-        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 0)"><p>1</p></div>
-        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 1)"><p>2</p></div>
-        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 2)"><p>3</p></div>
-        <div class="selector-item" onclick="openArtwork((4 * localPanelID) + 3)"><p>4</p></div>
+    <div id="selector-panel" class="drop-shadow">
+        <div class="selector-item" onclick="openArtwork(localID, 0)"><p>1</p></div>
+        <div class="selector-item" onclick="openArtwork(localID, 1)"><p>2</p></div>
+        <div class="selector-item" onclick="openArtwork(localID, 2)"><p>3</p></div>
+        <div class="selector-item" onclick="openArtwork(localID, 3)"><p>4</p></div>
     </div>
 
-    <div id="content-panel"></div>
+    <div id="artist-panel" class="drop-shadow">
+        <h1>artist name</h1>
+        <p>Nationality: </p>
+        <p>Born: </p>
+        <p>Died: </p>
+        <p>Artist Statement: </p>
+        
+        
+    </div>
+    <div id="content-panel" class="drop-shadow">
+        <div id="content-info">
+            <h1 style="--pos: 0;">title placeholder</h1>
+            <h1 style="--pos: 1;">medium placeholder</h1>
+            <h1 style="--pos: 2;">Year created placeholder</h1>
+        </div>
+        <div id="painting-image"></div>
+    </div>
 </body>
 
 </html>
